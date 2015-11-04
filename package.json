@@ -1,0 +1,30 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Documentation for the EditData project",
+  "main": "index.js",
+  "scripts": {
+    "bundle-css": "sheetify assets/deps.css > assets/bundle.css",
+    "bundle": "npm run bundle-css",
+    "start": "npm run bundle && jekyll serve -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/editdata/documentation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/editdata/documentation/issues"
+  },
+  "private": true,
+  "homepage": "https://github.com/editdata/documentation#readme",
+  "devDependencies": {
+    "sheetify": "^2.0.3"
+  },
+  "dependencies": {
+    "basscss-grid": "^1.0.3",
+    "csskit": "^1.1.1",
+    "normalize.css": "^3.0.3"
+  }
+}

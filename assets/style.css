@@ -1,0 +1,164 @@
+html,
+body {
+  font: 18px/1.5 'Source Sans Pro', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f8f8f6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: color(var(--blue) shade(20%));
+}
+
+a:active,
+a:focus {
+  color: #000;
+}
+
+b, strong {
+  font-weight: 400;
+}
+
+pre,
+code {
+  font-family: Monaco, Menlo, monospace;
+  padding: 0px 4px;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  overflow: scroll;
+  font-size: 12px;
+}
+
+pre {
+  padding: 10px;
+}
+
+pre code {
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+}
+
+hr {
+  border-top: 1px solid #e2e2e2;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.serif {
+  font-family: Lora, Baskerville, sans-serif;
+}
+
+.sans-serif {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, arial, sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgb(68, 169, 202);
+  height: 180px;
+  width: 100%;
+  color: #fff;
+  padding-top: 50px;
+}
+
+header .site-logo {
+  width: 70px;
+  height: auto;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+header .site-title {
+  font-size: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header a .site-title {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px 10px;
+}
+
+main {
+  min-height: 500px;
+  margin-top: 60px;
+  clear: both;
+}
+
+main h1 {
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 832px) {
+  .content {
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 840px) {
+  .container {
+    width: 800px;
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1020px) {
+  .container {
+    width: 980px;
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    width: 1100px;
+    margin: 0px auto;
+  }
+}
