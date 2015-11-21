@@ -4,6 +4,9 @@
   "description": "Documentation for the EditData project",
   "main": "index.js",
   "scripts": {
+    "packages-sync": "cat repos.txt | ecosystem-docs sync",
+    "packages-read": "cat repos.txt | ecosystem-docs read | ./bin/repos.js",
+    "packages": "npm run packages-sync && npm run packages-read",
     "bundle-css": "sheetify assets/deps.css > assets/bundle.css",
     "bundle": "npm run bundle-css",
     "start": "npm run bundle && jekyll serve -w"
@@ -20,7 +23,11 @@
   "private": true,
   "homepage": "https://github.com/editdata/documentation#readme",
   "devDependencies": {
-    "sheetify": "^2.0.3"
+    "ecosystem-docs": "^1.1.0",
+    "gray-matter": "^2.0.2",
+    "ndjson": "^1.4.3",
+    "sheetify": "^2.0.3",
+    "through2": "^2.0.0"
   },
   "dependencies": {
     "basscss-grid": "^1.0.3",
