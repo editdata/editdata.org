@@ -12,9 +12,6 @@ collections:
   packages:
     output: true
     permalink: /packages/:path/
-  topics:
-    output: true
-    permalink: /:path/
 
 defaults:
   -
