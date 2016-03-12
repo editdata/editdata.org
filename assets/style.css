@@ -98,7 +98,8 @@ header {
   height: 180px;
   width: 100%;
   color: #fff;
-  padding-top: 50px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 header .site-logo {
@@ -118,14 +119,41 @@ header a .site-title {
   color: #fff;
 }
 
-.container {
-  width: 100%;
-  margin: 0px;
-  padding: 0px 10px;
+.header-nav {
+  font-weight: 400;
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+
+.header-nav-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header-nav-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-nav-item a:hover,
+.header-nav-item a:active,
+.header-nav-item a:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: 840px) {
+  header {
+    text-align: left;
+    padding-top: 50px;
+  }
+
+  .header-nav {
+    float: right;
+    margin-top: 30px;
+  }
 }
 
 main {
-  min-height: 500px;
   margin-top: 60px;
   clear: both;
 }
@@ -134,6 +162,46 @@ main h1 {
   font-size: 35px;
   font-weight: 200;
   margin-bottom: 25px;
+}
+
+.block {
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color:#fff;
+  padding: 30px 30px 10px 30px;
+}
+
+.landing-title {
+  text-align: center;
+  font-size: 45px;
+  padding: 0px 5px;
+}
+
+.flatsheet-description {
+  background-color: #FFF7D4;
+  padding: 50px;
+  font-family: Lora, Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  margin: 50px auto;
+}
+
+@media (min-width: 600px) {
+  .block {
+    width: 60%;
+  }
+}
+
+.site-footer {
+  clear: both;
+  padding: 50px 0px;
+}
+
+.container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px 20px;
 }
 
 @media (min-width: 832px) {

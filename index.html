@@ -1,0 +1,51 @@
+---
+title: About EditData
+layout: landing
+---
+
+<section class="welcome">
+  <div class="container">
+
+    <h1 class="landing-title">Tools for collaborating on data.</h1>
+    {% include newsletter.html %}
+
+    <div class="flatsheet-description block"><h2>EditData was previously named Flatsheet.</h2>We renamed the project to take focus away from the idea of spreadsheets, to expand the scope to editing data in a variety of ways.</div>
+
+    <div class="block">
+      <h2>How can I use EditData?</h2>
+      <br>
+      <h3>The app at EditData.org</h3>
+      <p>Use <a href="" target="_blank">editdata.org</a> to edit CSV or JSON files from GitHub repos or your computer.</p>
+      <h3>The JavaScript modules</h3>
+      <p>Build your own data editor with the modules found at <a href="" target="_blank">github.com/editdata</a>.</p>
+    </div>
+
+    <div class="block">
+      <h2>From the blog:</h2>
+      <div class="posts">
+        {% for post in site.posts limit:3 %}
+          {% if post.published %}
+            <div class="post" id="{{ post.slug }}">
+              <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a> - <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span></h3>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Is this open source? Can I contribute?</h2>
+      <p>Yes. Always. Forever. Find the code at <a href="https://github.com/editdata" target="_blank">github.com/editdata</a></p>
+      <p>The modules that make up EditData will always be open source, so you'll be able to run your own instance of EditData.org or build your own app using the same componenets.</p>
+      <p>It would be great to hear about your potential use cases, ideas you have for projects that might use EditData in some way, or your interest in getting involved with EditData development.</p>
+      <h2>Contact & contribution info:</h2>
+      <ul>
+        <li><strong><a href="http://github.com/editdata">EditData on Github</a></strong></li>
+        <li><strong><a href="http://github.com/editdata/discuss/issues">Discuss the EditData project</a></strong></li>
+        <li><strong><a href="https://gitter.im/editdata/discuss">Chat on Gitter</a></strong></li>
+        <li><strong><a href="https://github.com/editdata/contributing">Contributing guidelines</a></strong></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
