@@ -2,7 +2,6 @@ title: EditData
 description: "Collaboratively manage data."
 permalink: /posts/:title
 baseurl: ''
-markdown: redcarpet
 exclude: [node_modules, tmp, bin, css]
 
 collections:
