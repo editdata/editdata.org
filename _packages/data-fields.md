@@ -2,16 +2,22 @@
 user: editdata
 path: editdata/data-fields
 name: data-fields
-head: 5b88a3786bd327d3806eceaa1f370bf3106b6b59
+head: 97251127ef29f4b494f39c68868d44248fe8c758
 package:
   name: data-fields
-  version: 3.0.0
+  version: 3.0.1
   description: ''
   main: index.js
   scripts:
     lint: standard
     test: 'npm run lint && zuul -- ./tests/*.js'
     test-local: 'npm run lint && zuul --local 8080 -- ./tests/*.js'
+    budo: budo examples/index.js --dir examples --live
+    example: 'npm run build-example && npm run budo'
+    build-example: 'npm run build-example-js & npm run build-example-css '
+    build-example-js: 'browserify examples/index.js > examples/bundle.js'
+    build-example-css: postcss -u autoprefixer -o examples/bundle.css examples/index.css
+    deploy: 'npm run build-example && gh-pages -d examples'
   repository:
     type: git
     url: 'git+https://github.com/editdata/data-fields.git'
@@ -30,12 +36,16 @@ package:
     data-field-classname: ^1.0.0
     leaflet: ^0.7.7
     leaflet-draw: ^0.2.4
-    list-editor: editdata/list-editor
+    list-editor: ^1.0.2
     object-array-converter: ^1.0.0
     xtend: ^4.0.1
   devDependencies:
+    autoprefixer: ^6.3.3
+    browserify: ^13.0.0
     budo: ^8.1.0
-    documentation-readme: ^2.1.1
+    data-form: ^1.1.1
+    gh-pages: ^0.11.0
+    postcss-cli: ^2.5.1
     standard: ^6.0.7
     tap-spec: ^4.1.1
     tape: ^4.5.1
@@ -60,7 +70,7 @@ contributors:
     received_events_url: 'https://api.github.com/users/kvnneff/received_events'
     type: User
     site_admin: false
-    contributions: 11
+    contributions: 14
   - login: sethvincent
     id: 164214
     avatar_url: 'https://avatars.githubusercontent.com/u/164214?v=3'
@@ -78,9 +88,17 @@ contributors:
     received_events_url: 'https://api.github.com/users/sethvincent/received_events'
     type: User
     site_admin: false
-    contributions: 3
+    contributions: 4
 readme: >
   # data-fields
+
+
+
+  Render fields for various types of input.
+
+
+
+  [![npm](https://img.shields.io/npm/v/data-fields.svg)](http://npmjs.com/data-fields)
 
 
 
@@ -432,6 +450,6 @@ readme: >
 
 
   [MIT](LICENSE.md)
-page: false
+page: 'http://about.editdata.org/data-fields/'
 ---
 

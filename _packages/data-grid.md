@@ -2,7 +2,7 @@
 user: editdata
 path: editdata/data-grid
 name: data-grid
-head: e7332fd16a17594be8dc1cfa23869b96c6176242
+head: 65740b034c01a1893435671310f4773f66ca5d10
 contributors:
   - login: sethvincent
     id: 164214
@@ -21,7 +21,7 @@ contributors:
     received_events_url: 'https://api.github.com/users/sethvincent/received_events'
     type: User
     site_admin: false
-    contributions: 23
+    contributions: 25
   - login: kvnneff
     id: 3835556
     avatar_url: 'https://avatars.githubusercontent.com/u/3835556?v=3'
@@ -39,16 +39,21 @@ contributors:
     received_events_url: 'https://api.github.com/users/kvnneff/received_events'
     type: User
     site_admin: false
-    contributions: 2
+    contributions: 8
 package:
   name: data-grid
-  version: 1.2.0
+  version: 1.2.1
   description: ''
   main: index.js
   style: style.css
   scripts:
-    bundle-example: 'sheetify example/style.css > example/bundle.css'
-    example: "budo example/index.js --dir example --live --onupdate 'npm run bundle-example'"
+    lint: standard
+    budo: "budo example/index.js --dir example --live --onupdate 'npm run build-example'"
+    example: npm run budo
+    build-example: 'npm run build-example-js & npm run build-example-css'
+    build-example-js: 'browserify example/index.js > example/bundle.js'
+    build-example-css: 'postcss -u autoprefixer -u postcss-import example/style.css > example/bundle.css'
+    deploy: 'npm run build-example && gh-pages -d example'
   repository:
     type: git
     url: 'git+https://github.com/editdata/data-grid.git'
@@ -58,20 +63,22 @@ package:
     url: 'https://github.com/editdata/data-grid/issues'
   homepage: 'https://github.com/editdata/data-grid#readme'
   dependencies:
-    base-element: ^3.0.1
-    data-editor: 'github:editdata/data-editor'
-    data-fields: 'github:editdata/data-fields'
+    data-fields: ^3.0.0
     extend: ^3.0.0
-    inherits: ^2.0.1
     vdom-thunk: ^3.0.0
     view-list: ^2.0.0
   devDependencies:
-    budo: ^6.0.1
-    data-editor: 'github:editdata/data-editor'
-    data-form: 'github:editdata/data-form'
-    sheetify: ^2.0.3
-    virtual-raf: ^2.0.3
-readme: >-
+    autoprefixer: ^6.3.3
+    browserify: ^13.0.0
+    budo: ^8.1.0
+    data-form: ^1.1.2
+    data-format: ^1.0.1
+    gh-pages: ^0.11.0
+    postcss-cli: ^2.5.1
+    postcss-import: ^8.0.2
+    standard: ^6.0.8
+    virtual-app: ^3.0.0
+readme: >
   # data-grid
 
 
@@ -80,12 +87,17 @@ readme: >-
 
 
 
+  [![npm](https://img.shields.io/npm/v/data-grid.svg)](http://npmjs.com/data-grid)
+
+
+
+  [View an online demo.](http://about.editdata.org/data-grid/)
+
+
+
   ## See also
 
 
-
-  - [data-editor](https://github.com/editdata/data-editor) – base editor that
-  works with data-grid
 
   - [data-ui](https://github.com/editdata/data-ui) – a collection of resources
   & modules for building interfaces for managing data
@@ -103,6 +115,6 @@ readme: >-
 
 
   [MIT](LICENSE.md)
-page: false
+page: 'http://about.editdata.org/data-grid/'
 ---
 
