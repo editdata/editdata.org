@@ -1,5 +1,5 @@
 {
-  "name": "documentation",
+  "name": "editdata.org",
   "version": "1.0.0",
   "description": "Documentation for the EditData project",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "packages-read": "cat repos.txt | ecosystem-docs read | ./bin/repos.js",
     "packages": "npm run packages-sync && npm run packages-read",
     "bundle-css": "sheetify assets/deps.css > assets/bundle.css",
-    "bundle": "npm run bundle-css",
+    "bundle": "npm run bundle-css && npm run packages",
+    "deploy": "npm run bundle && surge _site/ editdata.org",
     "start": "npm run bundle && jekyll serve -w"
   },
   "repository": {
