@@ -9,7 +9,7 @@
     "packages": "npm run packages-sync && npm run packages-read",
     "bundle-css": "sheetify assets/deps.css > assets/bundle.css",
     "bundle": "npm run bundle-css && npm run packages",
-    "deploy": "npm run bundle && surge _site/ editdata.org",
+    "deploy": "npm run bundle && jekyll build && surge _site/ editdata.org",
     "start": "npm run bundle && jekyll serve -w"
   },
   "repository": {
