@@ -14,20 +14,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/editdata/documentation.git"
+    "url": "git+https://github.com/editdata/editdata.org.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/editdata/documentation/issues"
+    "url": "https://github.com/editdata/editdata.org/issues"
   },
   "private": true,
-  "homepage": "https://github.com/editdata/documentation#readme",
+  "homepage": "https://github.com/editdata/editdata.org#readme",
   "devDependencies": {
     "ecosystem-docs": "^1.1.0",
     "gray-matter": "^2.0.2",
     "ndjson": "^1.4.3",
     "sheetify": "^2.0.3",
+    "surge": "^0.17.7",
     "through2": "^2.0.0"
   },
   "dependencies": {

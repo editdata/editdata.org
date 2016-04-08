@@ -1,4 +1,6 @@
-# EditData documentation site
+# EditData.org
+
+EditData documentation site.
 
 ## WIP
 
