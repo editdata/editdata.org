@@ -164,6 +164,15 @@ main h1 {
   margin-bottom: 25px;
 }
 
+.page {
+  margin: 0px auto;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
 .block {
   width: 100%;
   margin: 20px auto;
