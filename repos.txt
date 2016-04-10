@@ -1,10 +1,4 @@
-editdata/data-editor
 editdata/data-grid
 editdata/data-form
-editdata/data-map
 editdata/data-fields
-editdata/data-field-geojson
-editdata/data-field-image
-editdata/data-field-list
-editdata/data-field-string
-editdata/data-field-url
+editdata/list-editor
