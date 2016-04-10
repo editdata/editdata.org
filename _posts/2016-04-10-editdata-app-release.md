@@ -7,9 +7,11 @@ author: Seth Vincent
 
 Over the past few months we've been working on a new release of the [EditData app](http://app.editdata.org). Here's a roundup of where things are at.
 
+If you haven't tried it out yet, the EditData app is an editor that lets you edit data stored in github repositories or on your computer. You can commit changes back to your github repo, upload & download files, and convert between CSV files and JSON files with an array of objects.
+
 ## What's new
 
-### Flatsheet is now EditData
+### Flatsheet is now officially named EditData
 
 We've been slowly renaming things from Flatsheet to EditData. The goal is to take focus away from spreadsheets and make the project about data editing & workflow using whatever method is most effective. Plus now the project doesn't share a name with a type of bedding.
 
