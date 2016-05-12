@@ -7,7 +7,12 @@ layout: landing
   <div class="container">
 
     <h1 class="landing-title">Tools for collaborating on data.</h1>
-    {% include newsletter.html %}
+    
+    <div class="block">
+      <h2>Send us your email & we'll send you updates</h2>
+      <p>Find out all the latest news about the EditData project:</p>
+      {% include newsletter.html %}
+    </div>
 
     <div class="flatsheet-description block"><h2>EditData was previously named Flatsheet.</h2>We renamed the project to take focus away from the idea of spreadsheets, to expand the scope to editing data in a variety of ways.</div>
 
@@ -47,5 +52,8 @@ layout: landing
       </ul>
     </div>
 
+    <div class="block">
+      {% include support.html %}
+    </div>
   </div>
 </section>

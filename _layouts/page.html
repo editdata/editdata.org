@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="container">
-  <div class="content col col-12 md-col-8">
-    <div class="page">
+  <section class="w-60 fl">
+    <div class="page pa3 mr3">
       {% if page.date %}<div class="post-date">{{ page.date | date: "%-d %B %Y" }}</div>{% endif %}
       {% if page.title %}<h1 class="page-title">{{ page.title }}</h1> {% endif %}
 
@@ -12,5 +12,6 @@ layout: default
       {{ content }}
       </article>
     </div>
-  </div>
+  </section>
+  {% include sidebar.html %}
 </div>

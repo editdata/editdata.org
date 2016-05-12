@@ -165,12 +165,8 @@ main h1 {
 }
 
 .page {
-  margin: 0px auto;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 100%;
-  max-width: 700px;
 }
 
 .block {
@@ -179,6 +175,13 @@ main h1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   background-color:#fff;
   padding: 30px 30px 10px 30px;
+}
+
+.sidebar .content-section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .landing-title {
@@ -210,7 +213,7 @@ main h1 {
 .container {
   width: 100%;
   margin: 0px;
-  padding: 0px 20px;
+  padding: 0px 0px;
 }
 
 @media (min-width: 832px) {
